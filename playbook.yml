@@ -24,6 +24,5 @@
   become: yes
   become_user: root
   become_method: sudo
-  tasks:
-    - name: Import Grafana GPG key
-      shell: rpm --import https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana
+  roles:
+    - grafana
